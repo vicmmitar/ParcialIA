@@ -174,7 +174,14 @@ for i in range(len(nombres)-1):
 media = df.mean()
 mediana = df.median()
 moda = df.mode()
-print(media,mediana,moda)
+print("MEDIA")
+print(media)
+
+print("MEDIANA")
+print(mediana)
+
+print("MODA")
+print(moda)
 
 import matplotlib.pyplot as plt
 plt.style.use("bmh")            #Declaración del estilo

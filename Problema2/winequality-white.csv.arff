@@ -1,17 +1,17 @@
-@relation 'winequality-white-weka.filters.unsupervised.attribute.Reorder-R1,2,3,4,5,6,7,8,9,10,11,12'
+@relation 'winequality-white'
 
-@attribute 'fixed acidity' numeric
-@attribute 'volatile acidity' numeric
-@attribute 'citric acid' numeric
-@attribute 'residual sugar' numeric
-@attribute chlorides numeric
-@attribute 'free sulfur dioxide' numeric
-@attribute 'total sulfur dioxide' numeric
-@attribute density numeric
-@attribute pH numeric
-@attribute sulphates numeric
-@attribute alcohol numeric
-@attribute quality numeric
+@attribute 'fixed acidity' REAL
+@attribute 'volatile acidity' REAL
+@attribute 'citric acid' REAL
+@attribute 'residual sugar' REAL
+@attribute chlorides REAL
+@attribute 'free sulfur dioxide' REAL
+@attribute 'total sulfur dioxide' REAL
+@attribute density REAL
+@attribute pH REAL
+@attribute sulphates REAL
+@attribute alcohol REAL
+@attribute quality {3,4,5,6,7,8,9}
 
 @data
 3.8,0.31,0.02,11.1,0.036,20,114,0.99248,3.75,0.44,12.4,6

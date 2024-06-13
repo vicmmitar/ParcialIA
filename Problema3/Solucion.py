@@ -6,34 +6,20 @@ Created on Tue Mar 12 10:36:28 2024
 """
 
 import numpy as np
-from sklearn.datasets import load_iris
-from sklearn.model_selection import train_test_split
+import pandas as pd
 
-data = load_iris()
-X = data.data
-y = data.target
-print(X.shape, y.shape)
+# Definir el separador personalizado
+separador = ';'
 
-for i in range(10):
-    Xtrain, Xtest, ytrain, ytest = train_test_split(X,y,test_size=0.2)
-    print(ytest)
-    
-#---
-# Labelencoder y onehotencoder
-miY1 = ['juan', 'maria', 'julio']
+# Cargar el archivo CSV con el separador personalizado en un DataFrame
+df = pd.read_csv('./winequality-white.csv', delimiter=separador)
 
-from sklearn.preprocessing import LabelEncoder
-from sklearn.preprocessing import OneHotEncoder
-pepo = LabelEncoder()
-etiqueta = pepo.fit_transform(miY1)
-print("---")
-print(etiqueta)
+salida_esperada = df["quality"]
 
+salida_esperada_one_hot = np.zeros((df["quality"].size, salida_esperada.max()+1))
+#print(salida_esperada_one_hot)
+salida_esperada_one_hot[np.arange(salida_esperada.size), salida_esperada] = 1
+#print(salida_esperada_one_hot)
 
-miY2 = [['Juan',1],['Maria',2],['Juio',3]]
-pepo = OneHotEncoder()
-etiqueta = pepo.fit_transform(miY2)
-print("---")
-print(etiqueta)
+print(df.columns)
 
-print(etiqueta.toarray())
