@@ -14,16 +14,45 @@ G = nx.DiGraph()
 # Estructura básica: G.add_edge('parent', 'child')
 
 # Ejemplo con una familia ficticia
-G.add_edge('Inocencio', 'Cristina')  # Juan es padre de Carlos
-G.add_edge('Inocencio', 'Mercedes')   # Juan es padre de Maria
-G.add_edge('Manuela', 'Cristina')   # Ana es madre de Carlos
-G.add_edge('Manuela', 'Mercedes')    # Ana es madre de Maria
-G.add_edge('Fredy', 'Victor')  # Carlos es padre de Luis
-#G.add_edge('Carlos', 'Eva')   # Carlos es padre de Eva
-G.add_edge('Cristina', 'Victor')   # Sofia es madre de Luis
-#G.add_edge('Sofia', 'Eva')    # Sofia es madre de Eva
-G.add_edge('Mercedes', 'Wilma')  # Maria es madre de Pedro
-G.add_edge('Mercedes', 'Wilma')  # David es padre de Pedro
+G.add_edge('Inocencio', 'Cristina')  # Inocencio es padre de Cristina
+G.add_edge('Inocencio', 'Mercedes')   # Inocencio es padre de Mercedes
+G.add_edge('Inocencio', 'Hilda')   # Inocencio es padre de Hilda
+G.add_edge('Inocencio', 'Raul')   # Inocencio es padre de Raul
+G.add_edge('Inocencio', 'Gonzalo')   # Inocencio es padre de Gonzalo
+G.add_edge('Manuela', 'Cristina')   # Manuela es madre de Cristina
+G.add_edge('Manuela', 'Mercedes')    # Manuela es madre de Mercedes
+G.add_edge('Manuela', 'Hilda')   # Manuela es madre de Hilda
+G.add_edge('Manuela', 'Raul')   # Manuela es madre de Raul
+G.add_edge('Manuela', 'Gonzalo')   # Manuela es madre de Gonzalo
+
+G.add_edge('Felipe', 'Rene')
+G.add_edge('Felipe', 'Yola')
+G.add_edge('Felipe', 'Zenobia')
+G.add_edge('Felipe', 'Nelly')
+G.add_edge('Felipe', 'Grover')
+G.add_edge('Felipe', 'Fredy')
+G.add_edge('Benita', 'Rene')
+G.add_edge('Benita', 'Yola')
+G.add_edge('Benita', 'Zenobia')
+G.add_edge('Benita', 'Nelly')
+G.add_edge('Benita', 'Grover')
+G.add_edge('Benita', 'Fredy')
+
+G.add_edge('Fredy', 'Victor')
+G.add_edge('Cristina', 'Victor')
+
+G.add_edge('Mercedes', 'Wilma')
+G.add_edge('Winsor', 'Wilma')
+
+G.add_edge('Gonzalo', 'Goni')
+G.add_edge('Elena', 'Goni')
+
+G.add_edge('Gonzalo', 'Jose')
+G.add_edge('Elena', 'Jose')
+
+G.add_edge('Hilda', 'Toto')
+G.add_edge('Adolfo', 'Toto')
+
 def get_parents(G, person):
     return list(G.predecessors(person))
 
